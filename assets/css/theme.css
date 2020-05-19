@@ -16,7 +16,7 @@
 .middle_content > h2, .featured_title{background-color:#12a3df}
 .slick-prev, .slick-next{background-color:#12a3df}
 .slick-prev:hover, .slick-next:hover{opacity:0.55}
-.featured_article{border-top:6px solid #12a3df}
+/* .featured_article{border-top:6px solid #12a3df} */
 .article_category > a:hover{color:#12a3df}
 .article_titile a:hover{color:#12a3df}
 .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus{background-color:#12a3df; color:#fff; border-color:#12a3df}
