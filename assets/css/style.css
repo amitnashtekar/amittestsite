@@ -1641,5 +1641,24 @@ figure.effect-lily a:hover img {
         width: 108%
     }
 }
+.middle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .middle-container .item {
+    flex: 0 32%;
+    height: 50px;
+    margin-bottom: 2%; /* (100-32*3)/2 */
+    background-color: #F2F2F2;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid #3A8BC3;
+  }
+  .middle-container strong {
+    font-size: 82%;
+  }
 
-
+  

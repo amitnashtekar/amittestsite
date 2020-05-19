@@ -20,6 +20,23 @@
 </head>
 
 <body>
+        
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+
+                                <div class="modal-header">
+                                  <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  ... Modal form elemnts
+                                </div>
+                              </div>
+                </div>
+              </div>
   <div class="main-container">
     <div id="preloader">
       <div id="status">&nbsp;</div>
@@ -119,7 +136,7 @@
                 <ul class="post_nav">
                   <li>
                     <select class="catgArchive" onChange="window.document.location.href=this.options[this.selectedIndex].value;">
-                      <option>Laboratory Consumables</option>
+                      <option >Laboratory Consumables</option>
                       <option value="./pages/singlepage.html">Glassware</option>
                       <option>Micro Centrifuge Tubes</option>
                       <option>Micro pipette tips</option>
@@ -148,65 +165,16 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-8">
             <div class="middle_content">
-              <h2 class="middle-header">Welcome to Sci Corn</h2>
-              <ul class="featured_nav">
-                <li class="wow fadeInDown">
-                  <figure class="featured_img"><a href="#"><img src="images/feature1.jpg" alt=""></a><a href="#"><img src="images/feature2.jpg" alt=""></a></figure>
-                  
-                  <article class="featured_article">
-
-                    <p>We introduce ourselves as one of the Importers, Exporters and leading Suppliers in all types of
-                      Medical & Research Lab Equipment Scientific,Surgical & Analytical Testing Instruments.We have been
-                      dealing mainly with Medical Colleges, Universities & Hospitals including Government hospitals,
-                      Pathology Laboratories, Chemical Laboratories, Pharmaceuticals Laboratories & Educational
-                      Institutions through out India directly and through our dealers since 1975.</p>
-                    <h2 class="article_titile">Our supply range consists of :</h2>
-                    <div class="colle">
-                      <ul>
-                        <li>
-                          <i class="fa fa-medkit"></i>
-                          <div class="data">
-                            <div class="data1">Laboratory Consumables</div>
-
-                          </div>
-                        </li>
-                        <li>
-                          <i class="fa fa-plus-square"></i>
-                          <div class="data">
-                            <div class="data1">Scientific Research </div>
-
-                          </div>
-                        </li>
-                        <li>
-                          <i class="fa fa-ambulance"></i>
-                          <div class="data">
-                            <div class="data1">Liquid Handling Products</div>
-
-                          </div>
-                        </li>
-                        <li>
-                          <i class="fa fa-stethoscope"></i>
-                          <div class="data">
-                            <div class="data1">Chromatography</div>
-
-                          </div>
-                        </li>
-                        <li>
-                          <i class="fa fa-wheelchair"></i>
-                          <div class="data">
-                            <div class="data1">Laboratory Chemicals</div>
-
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-
-                  </article>
-
-
-                </li>
-
-              </ul>
+              <h2 class="middle-header">Laboratory Consumables</h2>
+              
+              <div class="middle-container">
+                    <div  class="item"><a href="#" data-toggle="modal" data-target=".bd-example-modal-lg" ><strong id="item1">Micro Centrifuge Tubes</strong></a></div>
+                    <div class="item"><a href="#"><strong>Micro pipette tips </strong></a></div>
+                    <div class="item"><a href="#"><strong>Non Vaccume Blood Collection Tube</strong></a></div>
+                    <div class="item"><a href="#"><strong>Sample Containers </strong></a></div>
+                    <div class="item"><a href="#"><strong>Samples Cuvettes & Cups </strong></a></div>
+                    <div class="item"><a href="#"><strong>Serological Pipettes </strong></a></div>
+                  </div>
 
             </div>
           </div>
@@ -376,43 +344,7 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script>
-      $(function () {
-
-        var startTime = +new Date();
-        $('#right-container').css('overflow', 'hidden');
-
-        var slider = $('#right-slider'),
-          items = slider.find('li');
-        var sliderHeight = slider.height(),
-          itemsNum = items.length,
-          itemHeight = items.height();
-
-        slider.css('top', '-' + (sliderHeight + itemHeight) + 'px');
-
-        var startPos = slider.css('top');
-
-        items.first().before(items.clone());
-        items.last().after(items.clone());
-
-        scrollItems(slider, sliderHeight, itemHeight, startPos, 4);
-        var endTime = +new Date();
-        var diff = endTime - startTime;
-        console.log(diff);
-        setInterval(function () {
-          scrollItems(slider, sliderHeight, itemHeight, startPos, 4);
-        }, 40000);
-      });
-
-      function scrollItems(container, targetsHeight, increment, startPos, temps) {
-        var secs = temps * 10000;
-        container.animate({
-          'top': '-' + ((targetsHeight * 2) + increment) + 'px'
-        }, secs, 'linear', function () {
-          container.css('top', startPos);
-        });
-      }
-    </script>
+    
   </div>
 </body>
 
